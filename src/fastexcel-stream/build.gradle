@@ -1,0 +1,19 @@
+dependencies {
+    compile(
+            "org.apache.poi:poi-ooxml",
+    )
+}
+
+coverage {
+    includeClasses = [
+    ]
+    lineMini = 0.0
+    classMini = 0.0
+}
+
+style {
+    excludePackages = [
+    ]
+    excludeClasses = [
+    ]
+}

@@ -1,0 +1,42 @@
+project.ext {
+    guavaVersion = '28.2-jre'
+    poiVersion = "4.1.2"
+    easyExcelVersion = '3.0.5'
+    junitVersion = '4.12'
+    slf4jVersion = '1.7.25'
+    lang3Version = '3.9'
+    jupiterVersion = '5.7.0'
+    gsonVersion = '2.8.5'
+}
+
+dependencyManagement {
+    resolutionStrategy {
+        cacheChangingModulesFor 0, 'seconds'
+    }
+
+    dependencies {
+        dependency "com.google.guava:guava:$guavaVersion"
+        dependency "org.apache.poi:poi-ooxml:$poiVersion"
+        dependency "com.alibaba:easyexcel:$easyExcelVersion"
+        dependency "junit:junit:$junitVersion"
+        dependency "org.slf4j:slf4j-api:$slf4jVersion"
+        dependency "org.apache.commons:commons-lang3:$lang3Version"
+        dependency "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
+        dependency "com.google.code.gson:gson:$gsonVersion"
+    }
+}
+
+project.dependencies {
+    compile(
+            "com.google.guava:guava",
+            "org.slf4j:slf4j-api",
+            "org.apache.commons:commons-lang3",
+            "com.google.code.gson:gson"
+    )
+
+
+    testCompile(
+            "junit:junit",
+            "org.junit.jupiter:junit-jupiter-api"
+    )
+}

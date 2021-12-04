@@ -1,0 +1,14 @@
+rootProject.name = 'fastexcel'
+
+def category(name, modules) {
+    modules.each {
+        include it
+        project(":$it").projectDir = file("$name/$it")
+    }
+}
+
+category("src", [
+        'fastexcel-csv',
+        'fastexcel-xlsx',
+        'fastexcel-stream',
+])

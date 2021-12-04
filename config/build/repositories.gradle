@@ -1,0 +1,10 @@
+repositories {
+    mavenLocal()
+
+    mavenCentral()
+    jcenter()
+
+    maven {
+        url 'https://maven.aliyun.com/repository/public'
+    }
+}
